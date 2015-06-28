@@ -89,8 +89,15 @@ namespace Omnipay\Pin\Message;
  * @see \Omnipay\Pin\Gateway
  * @link https://pin.net.au/docs/api/charges 
  */
-class PurchaseRequest extends AbstractRequest
+class AuthorizeRequest extends AbstractRequest
 {
+    function getData() {
+      $data = parent::getData();
+      $data["capture"] = "false";
+
+      return $data;
+    }
+
 
     public function sendData($data)
     {

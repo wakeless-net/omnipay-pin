@@ -38,8 +38,8 @@ class Response extends AbstractResponse
      */
     public function getCardToken()
     {
-        if (isset($this->data['response']['token'])) {
-            return $this->data['response']['token'];
+        if (isset($this->data['response']['card']['token'])) {
+            return $this->data['response']['card']['token'];
         }
     }
 
